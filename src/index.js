@@ -2,8 +2,8 @@ import react from 'react'
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-const Header = () => {
-    return <h1>Hello App component</h1>
+const Header = (props) => {
+    return <h1>Hello {props.title}</h1>
 }
 const Text = () => {
     return (
@@ -27,7 +27,8 @@ const Text = () => {
 const App = () => {
     return (
         <>
-            <Header />
+            <Header title="React" />
+            <Header title="App.js" />
             <Text />
         </>
     )

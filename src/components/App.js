@@ -27,7 +27,7 @@ const Text = () => {
     )
 }
 
-const App = () => {
+export const App = () => {
     return (
         <>
             <Header title="React" id={1} />
@@ -36,5 +36,3 @@ const App = () => {
         </>
     )
 }
-
-export default App

@@ -35,7 +35,6 @@ export const ProductsListItem = ({
         </>
     )
 }
-
 ProductsListItem.propTypes = {
     image: PropTypes.string,
     name: PropTypes.string.isRequired,
@@ -46,4 +45,5 @@ ProductsListItem.propTypes = {
 }
 ProductsListItem.defaultProps = {
     description: 'No description ...',
+    image: '/images/noimage.jpg',
 }

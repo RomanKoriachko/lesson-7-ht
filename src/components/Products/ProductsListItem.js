@@ -1,4 +1,10 @@
-import { Button, Card, CardActions, CardContent } from '@mui/material'
+import {
+    Button,
+    Card,
+    CardActions,
+    CardContent,
+    TextField,
+} from '@mui/material'
 import React from 'react'
 import './ProductsListItem.css'
 import PropTypes from 'prop-types'
@@ -25,6 +31,15 @@ export const ProductsListItem = ({
                         Capacity: {capacity} Gb
                     </div>
                     <div className="product-price">{price} $</div>
+                    <div className="product-quantity">
+                        <Button variant="contained">-</Button>
+                        <TextField
+                            size="small"
+                            value="1"
+                            className="text-center"
+                        />
+                        <Button variant="contained">+</Button>
+                    </div>
                 </CardContent>
                 <CardActions className="wrap-btn-add-to-cart">
                     <Button variant="outlined">Add to cart</Button>

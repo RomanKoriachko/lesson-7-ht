@@ -26,10 +26,8 @@ export const ProductsListItem = ({
                     </div>
                     <div className="product-price">{price} $</div>
                 </CardContent>
-                <CardActions>
-                    <Button variant="outlined" className="wrap-btn-add-to-cart">
-                        Add to cart
-                    </Button>
+                <CardActions className="wrap-btn-add-to-cart">
+                    <Button variant="outlined">Add to cart</Button>
                 </CardActions>
             </Card>
         </>

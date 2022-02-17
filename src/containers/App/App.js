@@ -12,7 +12,7 @@ export const App = () => {
         globalPrice: 0,
     })
 
-    const ChangeDataInCart = () => {
+    const changeDataInCart = () => {
         setCartData((prevState) => ({
             totalCount: prevState.totalCount + cartData.globalCount,
             totalPrice: prevState.totalPrice + cartData.globalPrice,
@@ -23,7 +23,7 @@ export const App = () => {
         <>
             <CssBaseline />
             <Header cartData={cartData} />
-            <Main ChangeDataInCart={ChangeDataInCart} cartData={cartData} />
+            <Main changeDataInCart={changeDataInCart} cartData={cartData} />
             <Footer />
         </>
     )

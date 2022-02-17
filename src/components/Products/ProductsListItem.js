@@ -16,7 +16,7 @@ export const ProductsListItem = ({
     type,
     capacity,
     price,
-    ChangeDataInCart,
+    changeDataInCart,
     cartData,
 }) => {
     const [count, setCount] = useState(1)
@@ -67,7 +67,7 @@ export const ProductsListItem = ({
                     </div>
                 </CardContent>
                 <CardActions className="wrap-btn-add-to-cart">
-                    <Button variant="outlined" onClick={ChangeDataInCart}>
+                    <Button variant="outlined" onClick={changeDataInCart}>
                         Add to cart
                     </Button>
                 </CardActions>

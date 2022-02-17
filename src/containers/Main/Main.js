@@ -2,12 +2,12 @@ import React from 'react'
 import { Container } from '@mui/material'
 import { ProductsList } from 'components/Products/ProductsList'
 
-export const Main = ({ ChangeDataInCart, cartData }) => {
+export const Main = ({ changeDataInCart, cartData }) => {
     return (
         <>
             <Container>
                 <ProductsList
-                    ChangeDataInCart={ChangeDataInCart}
+                    changeDataInCart={changeDataInCart}
                     cartData={cartData}
                 />
             </Container>

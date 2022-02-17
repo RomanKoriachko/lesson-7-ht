@@ -16,6 +16,8 @@ export const ProductsListItem = ({
     type,
     capacity,
     price,
+    ChangeDataInCart,
+    cartData,
 }) => {
     const [count, setCount] = useState(1)
 
@@ -25,7 +27,11 @@ export const ProductsListItem = ({
     const onIncrementClick = () => {
         setCount(count + 1)
     }
+    cartData.globalCount = count
+    cartData.globalPrice = price * cartData.globalCount
 
+    console.log(cartData.globalPrice)
+    console.log(cartData.globalCount)
     return (
         <>
             <Card>
@@ -50,7 +56,7 @@ export const ProductsListItem = ({
                         </Button>
                         <TextField
                             size="small"
-                            value={count}
+                            value={cartData.globalCount}
                             className="text-center"
                         />
                         <Button
@@ -63,7 +69,9 @@ export const ProductsListItem = ({
                     </div>
                 </CardContent>
                 <CardActions className="wrap-btn-add-to-cart">
-                    <Button variant="outlined">Add to cart</Button>
+                    <Button variant="outlined" onClick={ChangeDataInCart}>
+                        Add to cart
+                    </Button>
                 </CardActions>
             </Card>
         </>

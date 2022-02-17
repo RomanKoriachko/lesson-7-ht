@@ -30,8 +30,6 @@ export const ProductsListItem = ({
     cartData.globalCount = count
     cartData.globalPrice = price * cartData.globalCount
 
-    console.log(cartData.globalPrice)
-    console.log(cartData.globalCount)
     return (
         <>
             <Card>
